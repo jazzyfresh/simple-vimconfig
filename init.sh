@@ -4,5 +4,7 @@ cd
 
 ln -s .vim/vimrc .vimrc
 
-vim +BundleInstall! +qall
+# install vim plugins with vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
