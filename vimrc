@@ -15,20 +15,24 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'gregsexton/gitv'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
+Plugin 'larsyencken/vim-drake-syntax'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'Shougo/neocomplcache'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-obsession'
+" Plugin 'Shougo/neocomplcache'
 
 call vundle#end() "Required, plugins must be add before this line
+syntax on
 filetype plugin indent on "Required
 
 set number " Show line numbers
@@ -58,7 +62,7 @@ set clipboard=unnamed             " yank and paste with the system clipboard
 set scrolloff=10                  " show context above/below cursorline
 colorscheme grb256                " Sets default colorscheme to grb256, a dark background with blue text
 " colorscheme molokai               " Sets default colorscheme to monokai, a gray brown background with green text
-" let g:molokai_original = 1
+" let g:molokai_original = 1        " Doesn't work with vim-clojure-static plugin
 
 
 
@@ -85,8 +89,8 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
  " Moving lines up/down using [apple]-[shift]-[up]/[down].
-nmap <silent> <D-S-down> ddp==
-nmap <silent> <D-S-up> yykPjjddkk==
+" nmap <silent> <D-S-down> ddp==
+" nmap <silent> <D-S-up> yykPjjddkk==
 "nmap <silent> <D-S-up> ddkP==
 
 " Duplicating lines.
@@ -96,7 +100,7 @@ imap <silent> <D-d> <esc>yypi
 imap <silent> <D-S-up> <esc>ddkP==i
  " Saving
 " Stripping Whitespace on save.
-autocmd BufWritePre * :%s/\s\+$//e
+" autocmd BufWritePre * :%s/\s\+$//e
 
 let mapleader = ","
 
@@ -109,6 +113,15 @@ nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
+
+nnoremap <silent> <ESC>OA <Nop>
+nnoremap <silent> <ESC>OB <Nop>
+nnoremap <silent> <ESC>OC <Nop>
+nnoremap <silent> <ESC>OD <Nop>
+inoremap <silent> <ESC>OA <Nop>
+inoremap <silent> <ESC>OB <Nop>
+inoremap <silent> <ESC>OC <Nop>
+inoremap <silent> <ESC>OD <Nop>
 
 " inoremap  <Up>     <NOP>
 " inoremap  <Down>   <NOP>
