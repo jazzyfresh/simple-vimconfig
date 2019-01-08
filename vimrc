@@ -114,6 +114,8 @@ nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 
+" Something about apple computers inserting weird characters when you use
+" arrow keys
 nnoremap <silent> <ESC>OA <Nop>
 nnoremap <silent> <ESC>OB <Nop>
 nnoremap <silent> <ESC>OC <Nop>
@@ -123,6 +125,7 @@ inoremap <silent> <ESC>OB <Nop>
 inoremap <silent> <ESC>OC <Nop>
 inoremap <silent> <ESC>OD <Nop>
 
+" Manually disable arrow keys to force you to learn vim
 " inoremap  <Up>     <NOP>
 " inoremap  <Down>   <NOP>
 " inoremap  <Left>   <NOP>
