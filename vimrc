@@ -13,6 +13,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" Other plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'gregsexton/gitv'
 Plugin 'kchmck/vim-coffee-script'
@@ -31,6 +32,9 @@ Plugin 'posva/vim-vue'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end() "Required, plugins must be add before this line
+
+
+
 syntax on
 filetype plugin indent on "Required
 
@@ -65,29 +69,34 @@ colorscheme grb256                " Sets default colorscheme to grb256, a dark b
 
 
 
- " NORMAL MODE
+" NORMAL MODE
 " Activate after saving.
 iunmenu File.Save
 imenu <silent> File.Save <Esc>:w<CR>
- " Inserting empty lines using [enter] when in normal mode.
+
+" Inserting empty lines using [enter] when in normal mode.
 map <S-Enter> O<Esc>
 map <CR> o<Esc>k
- " Insert spaces using space bar when in normal mode.
+
+" Insert spaces using space bar when in normal mode.
 nnoremap <space> i<space><esc>
- " Remove search highlighting with <leader><space>
-"
+
+" Remove search highlighting with <leader><space>
 nnoremap <silent> <leader><space> :noh<CR>
- " Searching
+
+" Searching
 set hlsearch          "Highlight found searches
 set incsearch
 set smartcase
 map <silent> // :noh<CR>
- " Tabbing
+
+" Tabbing
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
- " Moving lines up/down using [apple]-[shift]-[up]/[down].
+
+" Moving lines up/down using [apple]-[shift]-[up]/[down].
 " nmap <silent> <D-S-down> ddp==
 " nmap <silent> <D-S-up> yykPjjddkk==
 "nmap <silent> <D-S-up> ddkP==
@@ -95,9 +104,10 @@ set expandtab
 " Duplicating lines.
 nnoremap <silent> <D-d> yyp
 imap <silent> <D-d> <esc>yypi
- imap <silent> <D-S-down> <esc>ddp==i
+imap <silent> <D-S-down> <esc>ddp==i
 imap <silent> <D-S-up> <esc>ddkP==i
- " Saving
+
+" Saving
 " Stripping Whitespace on save.
 " autocmd BufWritePre * :%s/\s\+$//e
 
@@ -108,6 +118,7 @@ map <C-n> :NERDTreeToggle<CR>
 " workaround for ^G error https://github.com/scrooloose/nerdtree/issues/928
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
+" Make ESC key into noop
 nnoremap <esc> :noh<return><esc>
 
 nnoremap <leader>h <C-w>h
