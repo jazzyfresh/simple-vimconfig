@@ -14,7 +14,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'gregsexton/gitv'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-endwise'
@@ -105,7 +104,9 @@ imap <silent> <D-S-up> <esc>ddkP==i
 let mapleader = ","
 
 " NERDTree
-map <silent> <leader>t :NERDTreeTabsToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
+" workaround for ^G error https://github.com/scrooloose/nerdtree/issues/928
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 nnoremap <esc> :noh<return><esc>
 
@@ -134,3 +135,14 @@ inoremap <silent> <ESC>OD <Nop>
 " noremap   <Down>   <NOP>
 " noremap   <Left>   <NOP>
 " noremap   <Right>  <NOP>
+
+
+
+""""""" Startup commands
+"" Open NerdTree for every file
+" autocmd vimenter * NERDTree
+"" Open NerdTree if no file specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"" close vim if only NERDtree open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
