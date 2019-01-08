@@ -28,7 +28,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-obsession'
-Plugin 'file:///home/jasmine/.vim/bundle/vim-drake-syntax'
+Plugin 'posva/vim-vue'
 " Plugin 'Shougo/neocomplcache'
 
 call vundle#end() "Required, plugins must be add before this line
