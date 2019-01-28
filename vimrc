@@ -30,6 +30,7 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-obsession'
 Plugin 'posva/vim-vue'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end() "Required, plugins must be add before this line
 
