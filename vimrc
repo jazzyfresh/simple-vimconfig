@@ -31,6 +31,8 @@ Plugin 'tpope/vim-obsession'
 Plugin 'posva/vim-vue'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'fatih/vim-go'
+Plugin 'zivyangll/git-blame.vim'
 
 call vundle#end() "Required, plugins must be add before this line
 
@@ -91,11 +93,6 @@ set incsearch
 set smartcase
 map <silent> // :noh<CR>
 
-" Tabbing
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
 
 " Moving lines up/down using [apple]-[shift]-[up]/[down].
 " nmap <silent> <D-S-down> ddp==
