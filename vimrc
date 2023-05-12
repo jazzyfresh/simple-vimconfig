@@ -111,6 +111,9 @@ imap <silent> <D-S-up> <esc>ddkP==i
 
 let mapleader = ","
 
+" Git Blame
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 " workaround for ^G error https://github.com/scrooloose/nerdtree/issues/928
