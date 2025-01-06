@@ -66,11 +66,13 @@ set hidden
 set autoread                      " reload files when changed on disk, i.e. via `git checkout`
 set clipboard=unnamed             " yank and paste with the system clipboard
 set scrolloff=10                  " show context above/below cursorline
-colorscheme grb256                " Sets default colorscheme to grb256, a dark background with blue text
+" colorscheme grb256                " Sets default colorscheme to grb256, a dark background with blue text
 " colorscheme molokai               " Sets default colorscheme to monokai, a gray brown background with green text
 " let g:molokai_original = 1        " Doesn't work with vim-clojure-static plugin
 
 
+set tabstop=2
+set softtabstop=2
 
 " NORMAL MODE
 " Activate after saving.
