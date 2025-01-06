@@ -16,7 +16,6 @@ Plugin 'gmarik/Vundle.vim'
 " Other plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'gregsexton/gitv'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -33,6 +32,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'fatih/vim-go'
 Plugin 'zivyangll/git-blame.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end() "Required, plugins must be add before this line
 
