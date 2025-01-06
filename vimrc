@@ -36,6 +36,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'pangloss/vim-javascript'
 
+" TODO: typescript code completion https://pragmaticpineapple.com/ultimate-vim-typescript-setup/#code-completions
+
 call vundle#end() "Required, plugins must be add before this line
 
 
